@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4169E1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bubbleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background circle -->
+  <circle cx="96" cy="96" r="88" fill="url(#bgGradient)" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Decorative small bubbles -->
+  <circle cx="40" cy="60" r="12" fill="#FFD700" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="160" cy="50" r="8" fill="#FF69B4" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="35" cy="140" r="10" fill="#98FB98" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="165" cy="135" r="14" fill="#DDA0DD" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="150" cy="100" r="6" fill="#87CEEB" opacity="0.9" filter="url(#glow)"/>
+  
+  <!-- Main bubble with letter A -->
+  <circle cx="96" cy="96" r="45" fill="url(#bubbleGradient)" stroke="#ffffff" stroke-width="3" filter="url(#glow)"/>
+  
+  <!-- Letter A -->
+  <text x="96" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff" stroke="#4169E1" stroke-width="1">A</text>
+  
+  <!-- Sparkle effects -->
+  <g fill="#ffffff" opacity="0.8">
+    <polygon points="70,40 72,44 76,44 73,47 74,51 70,48 66,51 67,47 64,44 68,44" />
+    <polygon points="130,70 131,72 133,72 132,73 132,75 130,74 128,75 128,73 127,72 129,72" />
+    <polygon points="120,140 122,144 126,144 123,147 124,151 120,148 116,151 117,147 114,144 118,144" />
+    <polygon points="50,110 51,112 53,112 52,113 52,115 50,114 48,115 48,113 47,112 49,112" />
+  </g>
+</svg>

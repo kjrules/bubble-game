@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4169E1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bubbleGradient512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="bubble2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#98FB98;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="bubble3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DDA0DD;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF6347;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="glow512">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient512)" stroke="#ffffff" stroke-width="8"/>
+  
+  <!-- Decorative bubbles around -->
+  <circle cx="120" cy="150" r="32" fill="url(#bubble2)" opacity="0.7" filter="url(#glow512)"/>
+  <circle cx="400" cy="130" r="24" fill="#FFD700" opacity="0.8" filter="url(#glow512)"/>
+  <circle cx="90" cy="350" r="28" fill="url(#bubble3)" opacity="0.7" filter="url(#glow512)"/>
+  <circle cx="420" cy="380" r="36" fill="#98FB98" opacity="0.8" filter="url(#glow512)"/>
+  <circle cx="380" cy="250" r="18" fill="#87CEEB" opacity="0.9" filter="url(#glow512)"/>
+  <circle cx="150" cy="400" r="22" fill="#FF69B4" opacity="0.8" filter="url(#glow512)"/>
+  <circle cx="350" cy="100" r="20" fill="#DDA0DD" opacity="0.8" filter="url(#glow512)"/>
+  
+  <!-- Small floating bubbles -->
+  <circle cx="200" cy="100" r="12" fill="#ffffff" opacity="0.6" filter="url(#glow512)"/>
+  <circle cx="320" cy="120" r="8" fill="#ffffff" opacity="0.5" filter="url(#glow512)"/>
+  <circle cx="180" cy="420" r="10" fill="#ffffff" opacity="0.6" filter="url(#glow512)"/>
+  <circle cx="400" cy="300" r="14" fill="#ffffff" opacity="0.5" filter="url(#glow512)"/>
+  
+  <!-- Main bubble with letter A -->
+  <circle cx="256" cy="256" r="120" fill="url(#bubbleGradient512)" stroke="#ffffff" stroke-width="6" filter="url(#shadow)"/>
+  
+  <!-- Inner highlight for 3D effect -->
+  <circle cx="236" cy="236" r="25" fill="#ffffff" opacity="0.3"/>
+  
+  <!-- Letter A -->
+  <text x="256" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#ffffff" stroke="#4169E1" stroke-width="2" filter="url(#shadow)">A</text>
+  
+  <!-- Sparkle effects -->
+  <g fill="#ffffff" opacity="0.9">
+    <!-- Large sparkles -->
+    <polygon points="180,120 185,135 200,135 188,147 193,162 180,150 167,162 172,147 160,135 175,135" />
+    <polygon points="350,180 353,187 360,187 355,192 357,199 350,195 343,199 345,192 340,187 347,187" />
+    <polygon points="320,350 325,365 340,365 328,377 333,392 320,380 307,392 312,377 300,365 315,365" />
+    <polygon points="140,300 143,307 150,307 145,312 147,319 140,315 133,319 135,312 130,307 137,307" />
+    
+    <!-- Small sparkles -->
+    <polygon points="100,200 102,204 106,204 103,207 104,211 100,208 96,211 97,207 94,204 98,204" />
+    <polygon points="380,320 382,324 386,324 383,327 384,331 380,328 376,331 377,327 374,324 378,324" />
+    <polygon points="220,80 222,84 226,84 223,87 224,91 220,88 216,91 217,87 214,84 218,84" />
+    <polygon points="300,420 302,424 306,424 303,427 304,431 300,428 296,431 297,427 294,424 298,424" />
+  </g>
+  
+  <!-- Additional glow around main bubble -->
+  <circle cx="256" cy="256" r="130" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+</svg>
